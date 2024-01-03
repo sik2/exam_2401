@@ -3,7 +3,8 @@
 </div>
 <ul th:each="article, loop : ${articleList}">
     <li th:text="${loop.count}"></li>
-    <li th:text="${article.title}"></li>
+    <a th:href="@{|/article/detail/${article.id}|}" th:text="${article.title}">
+    </a>
     <li th:text="${article.createDate}"></li>
 </ul>
 <a href="/article/create">게시글 등록</a>
