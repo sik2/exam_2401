@@ -1,11 +1,15 @@
-<form action="/article/create" method="POST">
-    <div>
-        <h3>제목</h3>
-        <input type="text" name="title">
+<html layout:decorate="~{layout}">
+    <div layout:fragment="content" class="container">
+        <form action="/article/create" method="POST">
+            <div>
+                <h3>제목</h3>
+                <input type="text" name="title">
+            </div>
+            <div>
+                <h3>내용</h3>
+                <textarea name="content"></textarea>
+            </div>
+            <button type="submit">등록</button>
+        </form>
     </div>
-    <div>
-        <h3>내용</h3>
-        <textarea name="content"></textarea>
-    </div>
-    <button type="submit">등록</button>
-</form>
+</html>
