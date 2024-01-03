@@ -1,5 +1,9 @@
 <div>
     게시글 리스트
 </div>
-
+<ul th:each="article, loop : ${articleList}">
+    <li th:text="${loop.count}"></li>
+    <li th:text="${article.title}"></li>
+    <li th:text="${article.createDate}"></li>
+</ul>
 <a href="/article/create">게시글 등록</a>

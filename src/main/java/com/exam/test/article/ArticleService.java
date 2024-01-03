@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @RequiredArgsConstructor
 @Service
@@ -15,5 +16,9 @@ public class ArticleService {
         article.setContent(content);
         article.setCreateDate(LocalDateTime.now());
         this.articleRepository.save(article);
+    }
+
+    public List<Article> findAll() {
+        return this.articleRepository.findAll();
     }
 }
