@@ -1,16 +1,12 @@
 <html layout:decorate="~{layout}">
     <div layout:fragment="content" class="container">
-        <div>게시글 상세</div>
-
-        <h3>제목</h3>
-        <div th:text="${article.title}"></div>
-
-        <h3>내용</h3>
-        <div th:text="${article.content}"></div>
-
-        <h3>등록일</h3>
-        <div th:text="${article.createDate}"></div>
-
-        <a href="/article/list">목록</a>
+        <div class="card">
+            <div class="card-header" th:text="${article.title}"></div>
+            <div class="card-body">
+                <div th:text="${article.content}"></div>
+                <span th:text="${#temporals.format(article.createDate, 'yyyy-MM-dd HH:mm')}" class="badge text-bg-light">Light</span>
+            </div>
+        </div>
+        <a class="btn btn-primary" href="/article/list">목록</a>
     </div>
 </html>

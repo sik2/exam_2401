@@ -1,15 +1,15 @@
 <html layout:decorate="~{layout}">
     <div layout:fragment="content" class="container">
         <form action="/article/create" method="POST">
-            <div>
-                <h3>제목</h3>
-                <input type="text" name="title">
+            <div class="mb-3">
+                <label for="title" class="form-label">제목</label>
+                <input type="text" class="form-control" id="title" name="title">
             </div>
-            <div>
-                <h3>내용</h3>
-                <textarea name="content"></textarea>
+            <div class="mb-3">
+                <label for="content" class="form-label">내용</label>
+                <textarea class="form-control" name="content" id="content" cols="30" rows="10"></textarea>
             </div>
-            <button type="submit">등록</button>
+            <button type="submit" class="btn btn-primary">등록</button>
         </form>
     </div>
 </html>
